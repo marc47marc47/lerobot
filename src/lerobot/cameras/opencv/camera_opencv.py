@@ -210,6 +210,7 @@ class OpenCVCamera(Camera):
                 f"{self} failed to set videocapture to MJPG."
             )
 
+
         default_width = int(round(self.videocapture.get(cv2.CAP_PROP_FRAME_WIDTH)))
         default_height = int(round(self.videocapture.get(cv2.CAP_PROP_FRAME_HEIGHT)))
 

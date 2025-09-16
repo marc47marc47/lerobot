@@ -1,0 +1,15 @@
+# 文件：overrides.yaml
+steps: 30000
+eval_freq: 1000
+save_freq: 1000
+policy:
+  use_amp: true
+  dim_model: 384
+  n_encoder_layers: 3
+dataset:
+  image_transforms:
+    enable: true
+optimizer:
+  lr: 2e-5
+  weight_decay: 3e-4
+
