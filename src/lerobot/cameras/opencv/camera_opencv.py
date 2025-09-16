@@ -204,6 +204,12 @@ class OpenCVCamera(Camera):
         else:
             self._validate_fps()
 
+        mode_success = self.videocapture.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M','J','P','G'))
+        if not mode_success:
+            raise RuntimeError(
+                f"{self} failed to set videocapture to MJPG."
+            )
+
         default_width = int(round(self.videocapture.get(cv2.CAP_PROP_FRAME_WIDTH)))
         default_height = int(round(self.videocapture.get(cv2.CAP_PROP_FRAME_HEIGHT)))
 
